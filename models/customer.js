@@ -29,6 +29,12 @@ class Customer {
     return results.rows.map(c => new Customer(c));
   }
 
+  /** get the full name of a customer */
+  fullName(){
+    const fullName = `${this.firstName} ${this.lastName}`
+    return fullName;
+  }
+
   /** get a customer by ID. */
 
   static async get(id) {
